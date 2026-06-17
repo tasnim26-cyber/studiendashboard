@@ -1,7 +1,7 @@
 from studiengang_repository import StudiengangRepository
 from dashboard_service import DashboardService
 from studiengang_controller import DashboardController
-from dashboard_view import DashboardKonsoleView
+from dashboard_view import  DashboardGUIView 
 
 class DashboardApp:
     """
@@ -12,7 +12,7 @@ class DashboardApp:
         repository = StudiengangRepository()
         service = DashboardService()
         controller = DashboardController(repository, service)
-        view = DashboardKonsoleView()
+        view = DashboardGUIView()
         
         # Daten über Controller laden und an View übergeben
         daten = controller.lade_dashboard_daten()
